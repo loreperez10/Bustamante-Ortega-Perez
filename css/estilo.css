@@ -1,28 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-
-
-div .imagenDePerfil img{
-
-  margin-top: 2rem;
-  margin-left: 2rem;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 9rem;
+  margin: 0;
+  padding: 0;
 }
 
-div .nombre{
+body {
+  background-color: rgba(128, 128, 128, 0.164);
+}
 
-  font-size: 3.5rem;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*header*/
+
+.header {
+  height: 5rem;
+}
+
+.header img {
+  width: 10rem;
+  margin-left: 5rem;
+}
+
+.header input::placeholder {
+  font-size: 1.1rem;
+}
+
+.header input {
+  border-radius: 0.7rem;
+  padding-top: 0.6rem;
+}
+
+.header button {
+  color: rgb(243, 242, 242);
+  background-color: rgb(15, 60, 150);
+  margin-right: 2rem;
+}
+
+/*Datos perfil*/
+.datosPersonales {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 80%;
+  height: 23rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+div .imagenDePerfil img {
+  margin-top: 2.5rem;
+  margin-left: -17rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 9rem;
+}
+
+.datos {
+  margin-top: 3rem;
+  margin-left: -42rem;
+}
+
+.boton-Seguir button {
+  font-size: 1.6rem;
+  border-radius: 0.7rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.boton-Seguir {
+  margin-top: 16.5rem;
+  margin-right: -18rem;
 
 }
-  /* font-family: 'Montserrat', sans-serif; */
+
+.datos h1 {
+
+  font-size: 3rem;
+
+}
+
+.datos p {
+  font-size: 1.2rem;
+}
+
+/*cometarios-Sobremi*/
+.comentarios-Sobremi {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Contenedor Imagenes-Comentarios*/
+.contenedor-Comentarios-Imagen {
+  width: 68rem;
+  margin-left: 13.3rem;
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+  padding-left: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+.contenedor-Comentarios-Imagen img {
+  height: 40rem;
+  border-radius: 0.5rem;
+}
+
+.boton-megusta button {
+  margin-top: 1rem;
+  color: #318CE7;
+}
+
+.seccion-megusta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cantidad-megusta {
+  margin-top: 1.6rem;
+  padding-right: 4.8rem;
+}
+
+.cantidad-megusta p {
+  font-size: 1.2rem;
+}
+
+.comentarios .daiana-color b {
+  color: #318CE7;
+}
+
+.boton-eliminar {
+  color: red;
+  margin-left: 1rem;
+  margin-top: -0.5rem;
+}
+
+.eliminar-boton-daiana {
+  display: flex;
+}
+
+.dejatucomentario input {
+  background-color: rgba(128, 128, 128, 0.123);
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  padding: 0.7rem;
+  padding-right: 25rem;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 6.5rem;
+}
+
+.boton-comentar{
+  margin-left: 1.7rem;
+  font-size: 1.6rem;
+  border-radius: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+/*Sobre mi*/
+.sobreMi {
+  margin-top: 4rem;
+  border-radius: 2rem;
+  margin-left: 10rem;
+  width: 30rem;
+  height: 31rem;
+  background-color: #fff;
+  padding: 2.5rem;
+}
+
+.sobreMi h2 {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+}
+
+.sobreMi p {
+  font-size: 1.19rem;
+}
