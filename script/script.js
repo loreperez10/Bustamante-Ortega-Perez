@@ -14,19 +14,24 @@ let liked = false;
 
 botonSeguir.addEventListener("click", cambiarTextoSeguir)
 
-botonMegusta.addEventListener("click", cambiarTextoMegusta)
 
-//funcion cambiar texto 
+
+
+
+document.getElementById("boton-ingresar").addEventListener("click",ingresar)
 function ingresar(){
     let usuario = document.getElementById("usuario").value;
 
     if (usuario === ""){
-        alert("no ha ingresado un nombre")
+        alert("No ha ingresado un nombre")
         return;
+    }else
+    {
+        localStorage.getItem(usuario)
     }
 }
 
-document.getElementById("boton-ingresar").addEventListener("click",ingresar)
+
 function cambiarTextoSeguir() {
     if (estadoActual === 0) {
         botonSeguir.textContent = "Dejar de seguir";
@@ -59,37 +64,33 @@ function sumarLikes() {
     botonMegusta.innerText = "¡Gracias por tu like!";
   }
 
-  const inputUsuario = document.getElementById("usuario");
-  const botonIngresar = document.getElementById("boton-ingresar");
-  const inputComentario = document.getElementById("comentario");
-  const botonComentar = document.getElementById("boton-comentar");
-  const comentariosContainer = document.querySelector(".comentarios");
+
+  function ingresar() {
+    let usuario = document.getElementById("usuario").value;
   
-  botonIngresar.addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    const nombreUsuario = inputUsuario.value;
-    localStorage.setItem("nombreUsuario", nombreUsuario);
-  });
-  
-  botonComentar.addEventListener("click", function() {
-    const nombreUsuario = localStorage.getItem("nombreUsuario");
-    const comentario = inputComentario.value;
-  
-    if (!nombreUsuario || !comentario) {
-      // manejar el error si el usuario o comentario están vacíos
+    if (usuario === "") {
+      alert("No ha ingresado un nombre")
       return;
+    } else {
+      localStorage.setItem("usuario", usuario);
+      
     }
+  }
+  function comentar() {
+    let comentario = document.getElementById("comentario-texto").value;
   
-    const nuevoComentario = document.createElement("div");
-    nuevoComentario.innerHTML = `
-      <p><b>${nombreUsuario}</b> ${comentario}</p>
-    `;
-  
-    comentariosContainer.appendChild(nuevoComentario);
-  
-    // opcional: reiniciar el valor del input de comentario
-    inputComentario.value = "";
-  });
+    if (comentario === "") {
+      alert("No ha ingresado un comentario")
+      return;
+    } else {
+      let usuario = localStorage.getItem("usuario");
+      let seccionComentarios = document.getElementById("seccion-comentarios");
+      let nuevoComentario = document.createElement("div");
+      nuevoComentario.classList.add("comentario");
+      nuevoComentario.innerHTML = "<span class='nombre-usuario' id='nuevo-usuario'>" + usuario + "</span>" + " " + "<span class='texto-comentario'>" + comentario + "</span>";
+      seccionComentarios.appendChild(nuevoComentario);
+      document.getElementById("comentario-texto").value = "";
+    }
+  }
 
 

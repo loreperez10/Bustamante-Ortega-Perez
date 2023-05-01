@@ -190,3 +190,9 @@ div .imagenDePerfil img {
 .sobreMi p {
   font-size: 1.19rem;
 }
+
+#nuevo-usuario {
+  color:  #318CE7;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
