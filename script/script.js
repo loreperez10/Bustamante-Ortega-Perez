@@ -70,7 +70,7 @@ function sumarLikes() {
 
   function comentar() {
     let usuario = localStorage.getItem("usuario");
-    let mensajeComentario = document.getElementById("mensaje-comentario");
+    let mensajeUsuario = document.getElementById("mensaje-comentario");
   
     if (!usuario) {
       mensajeUsuario.innerHTML = "No ha ingresado un usuario";
@@ -80,23 +80,25 @@ function sumarLikes() {
     let comentario = document.getElementById("comentario-texto").value;
   
     if (comentario === "") {
+      let mensajeComentario = document.getElementById("mensaje-comentario");
       mensajeComentario.innerHTML = "No ha ingresado un comentario";
       mensajeComentario.style.display = "block";
       return;
     } else {
       let usuario = localStorage.getItem("usuario");
       let seccionComentarios = document.getElementById("seccion-comentarios");
-      let nuevoComentario = document.createElement("div");
-
+      let nuevoComentario = document.createElement("nuevocomentario");
+  
       nuevoComentario.classList.add("comentario");
       nuevoComentario.innerHTML = "<span class='nombre-usuario' id='nuevo-usuario'>" + usuario + "</span>" + " " + "<span class='texto-comentario'>" + comentario + "</span>";
       const botonBorrar = document.createElement('button');
       botonBorrar.classList.add('botonBorrar');
       botonBorrar.innerText = "Eliminar";
-      
+  
       nuevoComentario.appendChild(botonBorrar);
       seccionComentarios.appendChild(nuevoComentario);
       document.getElementById("comentario-texto").value = "";
+      let mensajeComentario = document.getElementById("mensaje-comentario");
       mensajeComentario.style.display = "none";
   
       botonBorrar.addEventListener('click', () => {
