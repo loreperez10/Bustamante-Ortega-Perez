@@ -62,15 +62,18 @@ h3 {
 
 div .imagenDePerfil img {
   margin-top: 2.5rem;
-  margin-left: -17rem;
+  margin-left: -11rem;
   width: 18rem;
   height: 18rem;
+  padding: 3px;
   border-radius: 9rem;
+  border: 3px solid rgb(0, 140, 255);
 }
 
 .datos {
   margin-top: 3rem;
-  margin-left: -42rem;
+  margin-left: -35rem;
+  margin-right: 10rem;
 }
 
 .boton-Seguir button {
@@ -143,14 +146,14 @@ div .imagenDePerfil img {
   color: #318CE7;
 }
 
-.boton-eliminar {
-  color: red;
+.botonBorrar {
+  background-color: #c4bfbf83;
+  color: rgb(241, 7, 7);
+  border: none;
+  padding: 0.4rem;
   margin-left: 1rem;
-  margin-top: -0.5rem;
-}
-
-.eliminar-boton-daiana {
-  display: flex;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .dejatucomentario input {
@@ -196,3 +199,24 @@ div .imagenDePerfil img {
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
 }
+
+#mensaje-usuario {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-right: -80rem;
+  border-radius: 5px;
+  display: none;
+}
+
+#mensaje-comentario{
+  color: red;
+  font-weight: bold;
+  margin-top: -5rem;
+}
+
+#seguir-dejardeseguir{
+  margin-left: -14rem;
+}
+
+

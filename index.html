@@ -16,6 +16,7 @@
         <nav class="navbar bg-primary header">
             <div class="container-fluid">
                 <a class="navbar-brand"><img src="img/Qx8uR89.png" alt="logo"></a>
+                <div id="mensaje-usuario"></div>
                 <form class="d-flex" role="search">
                     <input id="usuario" class="form-control me-2" type="search" placeholder="Tu usuario" aria-label="Search">
                     <button id="boton-ingresar" onclick="ingresar()" class="btn btn-outline-success" type="submit">Ingresar</button>
@@ -63,20 +64,14 @@
                         <p><b>Kathleen J Rennie</b> ¡Esa foto de Tokio es simplemente espetacular! Me trae tantos
                             recuerdos.
                         </p>
-
-                        <div class="eliminar-boton-daiana">
-                            <div>
-                                <p class="daiana-color"><b>Daiana Bell</b> ¡Espero que algun dia pueda ver Tokio en persona!</p>
-                            </div>
-                            <div>
-                                <button type="button" class="btn btn-light boton-eliminar"><b>Eliminar</b></button>  
-                            </div>
-                        </div>
+                        <p class="daiana-color"><b>Daiana Bell</b> ¡Espero que algun dia pueda ver Tokio en persona!</p>                 
                     </div>
                     <div id="seccion-comentarios"></div>
                     <div class="dejatucomentario">
                         <form action="">
+                            <div id="mensaje-usuario"></div>
                             <input id= "comentario-texto" type="text" placeholder="Deja tu comentario..."><button id="boton-comentar" onclick="comentar()" type="button" class="btn btn-primary boton-comentar">Comentar</button>
+                            <div id="mensaje-comentario"></div>
                         </form>
 
                     </div>
